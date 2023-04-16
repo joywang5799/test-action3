@@ -12,7 +12,7 @@ jobs:
       - name: print
         run: |
           echo in test-action3/action.yml  in main
-          echo event_name: ${{ github.event_name }}
-          echo repository: ${{ github.repository }}
-          echo PR_NUMBER: ${{ env.PR_NUMBER }}
+          echo pwd
+          echo "$pwd"
+          echo $pwd
           
