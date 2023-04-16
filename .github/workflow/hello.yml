@@ -1,0 +1,17 @@
+name: hello
+on:
+  workflow_dispatch:
+  pull_request: {}
+jobs:
+  hello:
+    name: run hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: print
+        run: |
+          echo in test-action3/.github/workflow/hello.yml  in main
+          echo event_name: ${{ github.event_name }}
+          echo repository: ${{ github.repository }}
+          echo PR_NUMBER: ${{ env.PR_NUMBER }}
